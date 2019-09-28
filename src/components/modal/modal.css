@@ -15,7 +15,7 @@
 }
 
 .modalWrapper{
-	width: 70vw;
+	width: 935px;
 	height: 600px;
 	background-color: white;
 	position: absolute;
@@ -52,4 +52,32 @@
 	padding: 20px;
 	cursor: pointer;
 	z-index: 1;
+}
+
+@media(max-width: 1000px) {
+	.modalWrapper{
+		width: 90vw;
+}
+}
+
+@media(max-width: 736px) {
+	.modalWrapper{
+		width: 90vw;
+		align-items: center;
+		overflow-y: scroll;
+		flex-direction: column;
+	}
+	.postGallery{
+		max-width: 100%;
+		max-height: 300px;
+		order: 2;
+		padding: 16px 0;
+	}
+	.postTextHeader{
+		order: 1;
+	}
+	.postText{
+		order: 3;
+		width: 100%;
+	}
 }

@@ -22,3 +22,9 @@ button{
 .toRight{
 	right: 0;
 }
+
+@media(max-width: 736px) {
+	.toLeft, .toRight{
+		position: fixed;
+	}
+}

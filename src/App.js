@@ -17,7 +17,7 @@ function App() {
   const totalNumberOfPosts = posts.length
 
   const name = "szivecske"
-  const bio = "Rita"
+  const bio = "A kedvenc blogod.👩🏽‍💻"
 
   return (
     <div className="app">

@@ -2,4 +2,5 @@
   min-height: 100vh;
   background-color: #FAFAFA;
   font-size: calc(10px + 2vmin);
+  padding-bottom: 50px;
 }
