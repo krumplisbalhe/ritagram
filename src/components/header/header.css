@@ -1,0 +1,24 @@
+header{
+	height: 77px;
+	background: white;
+	display: flex;
+	align-items: center;
+	color: black;
+	box-shadow: 0px 1px 5px 0px rgba(224,224,224,1);
+}
+
+.logo{
+	height: 22px;
+	padding-left: 20px;
+}
+
+.verticalDecoration{
+	border-left: 1px solid black;
+	height: 28px;
+	margin: 16px;
+}
+
+.title{
+	font-family: 'Cookie', cursive;
+	font-size: 35px;
+}

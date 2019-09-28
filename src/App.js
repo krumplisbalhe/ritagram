@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import Header from './components/header/header.js'
+import Profile from './components/profile/profile.js'
+import PostsSection from './components/postsSection/postsSection.js'
+import './App.css'
+import avatar from './Rita.PNG'
 
 function App() {
+  const [posts, setPosts] = useState([])
+
+  useEffect(() => {
+    fetch("https://firestore.googleapis.com/v1/projects/ritagram-ef29e/databases/(default)/documents/posts?orderBy=date%20desc&pageSize=1000")
+      .then(response => response.json())
+			.then(data => setPosts(data.documents))
+  }, [])
+
+  const totalNumberOfPosts = posts.length
+
+  const name = "szivecske"
+  const bio = "Rita"
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header />
+      <Profile totalNumberOfPosts={totalNumberOfPosts} name={name} bio={bio} avatar={avatar} />
+      <PostsSection posts={posts} name={name} avatar={avatar} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

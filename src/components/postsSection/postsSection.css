@@ -1,0 +1,18 @@
+.postsSection{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 28px;
+	justify-items: center;
+	align-items: center;
+	color: black;
+	max-width: 70vw;
+	margin: 0 auto;
+	padding-top: 50px;
+	border-top: 1px solid #efefef;
+}
+
+@media (max-width: 700px){
+	.postsSection{
+		grid-template-columns: 1fr;
+	}
+}

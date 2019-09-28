@@ -1,0 +1,42 @@
+.profile{
+	padding: 60px 32px 44px 32px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.info{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	color: black;
+}
+
+.name{
+	margin-bottom: 20px;
+	font-size: 28px;
+}
+
+.numbers{
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+
+.numbers > span{
+	font-weight: bold;
+}
+
+.bio{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.avatar{
+	min-width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background-size: cover;
+	background-position: center center;
+	margin: 0 5vw;
+}

@@ -1,0 +1,24 @@
+.postGallery{
+	position: relative;
+}
+
+button{
+	border: none;
+  margin: 0;
+  text-decoration: none;
+	cursor: pointer;
+	background-color: transparent;
+}
+.toLeft, .toRight{
+	position: absolute;
+	opacity: 0.5;
+	outline: none;
+}
+
+.toLeft {
+	left: 0;
+}
+
+.toRight{
+	right: 0;
+}

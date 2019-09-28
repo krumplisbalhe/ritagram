@@ -1,0 +1,47 @@
+.postText{
+	border-left: 1px solid #efefef;
+	margin-bottom: 16px;
+}
+
+.postTextHeader{
+	height: 30px;
+	padding: 16px;
+	border-bottom: 1px solid #efefef;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.textAvatar{
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.textName{
+	margin-left: 16px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.date{
+	font-size: 14px;
+	color: #999;
+	margin: auto;
+  margin-right: 0;
+}
+
+.textContainer{
+	padding: 16px 12px;
+	overflow-y: scroll;
+	font-size: 15px;
+}
+
+.textContainer > h1{
+	font-size: 20px;
+}
+
+.textContainer > h2{
+	font-size: 18px;
+}
