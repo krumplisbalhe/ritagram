@@ -22,14 +22,17 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	display: flex;
-	flex-direction: row;
+	display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "gallery gallery header header" "gallery gallery text text" "gallery gallery text text" "gallery gallery text text" "gallery gallery text text" "gallery gallery text text" "gallery gallery text text" "gallery gallery text text";
 }
 
 .postGallery{
-	width: 55%;
+	grid-area: gallery;
 	height: 100%;
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 }
@@ -40,18 +43,8 @@
 }
 
 .postText{
-	width: 45%;
+	grid-area: text;
 	overflow-y: scroll;
-}
-
-.closeIcon{
-	position: absolute;
-	right: 0;
-	opacity: 0.5;
-	outline: none;
-	padding: 20px;
-	cursor: pointer;
-	z-index: 1;
 }
 
 @media(max-width: 1000px) {
@@ -62,22 +55,15 @@
 
 @media(max-width: 736px) {
 	.modalWrapper{
-		width: 90vw;
-		align-items: center;
-		overflow-y: scroll;
-		flex-direction: column;
+		width: 100vw;
+		height: 100vh;
+		grid-template-rows: 72px 60% 40%;
+		grid-template-areas: "header header header header" "gallery gallery gallery gallery"  "text text text text";
 	}
 	.postGallery{
-		max-width: 100%;
-		max-height: 300px;
-		order: 2;
-		padding: 16px 0;
+		border-bottom: 1px solid #efefef;
 	}
-	.postTextHeader{
-		order: 1;
-	}
-	.postText{
-		order: 3;
-		width: 100%;
+	.gallery{
+		max-height: 90%;
 	}
 }

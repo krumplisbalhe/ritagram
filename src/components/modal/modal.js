@@ -2,7 +2,7 @@ import React from 'react';
 import './modal.css'
 import PostText from '../postText/postText'
 import PostGallery from '../postGallery/postGallery'
-import Close from '../icons/close'
+import PostTextHeader from '../postTextHeader/postTextHeader'
 
 const Modal = ({
 	customHandler,
@@ -18,11 +18,11 @@ const Modal = ({
 	const currentPostPictures = currentPost.fields.images.arrayValue.values
 	return (
 		<div className="modal">
-			<Close customHandler={customHandler}/>
 			<div className="modalOverlay" onClick={customHandler}></div>
 			<div className="modalWrapper">
 				<PostGallery currentPostPictures={currentPostPictures} />
-				<PostText currentPostText={currentPostText} name={name} avatar={avatar} currentPostDate={currentPostDate} />
+				<PostTextHeader avatar={avatar} name={name} currentPostDate={currentPostDate} customHandler={customHandler} />
+				<PostText currentPostText={currentPostText} name={name} avatar={avatar} currentPostDate={currentPostDate} customHandler={customHandler} />
 			</div>
 		</div>
 	)

@@ -3,7 +3,6 @@ import './postGallery.css'
 import LeftArrow from '../icons/leftArrow'
 import RightArrow from '../icons/rightArrow'
 
-
 const PostGallery = ({
 	currentPostPictures
 }) => {
@@ -24,27 +23,31 @@ const PostGallery = ({
 
 	return (
 		<div className="postGallery">
-			{isMultiplePictures && (findCurrentPicIndex - 1 >= 0) &&
-				<button
-					className="toLeft"
-					onClick={() => toLeft(findCurrentPicIndex)}
-				>
-						<LeftArrow />
-				</button>
-			}
+			<div className="buttonSpace">
+				{isMultiplePictures && (findCurrentPicIndex - 1 >= 0) &&
+					<button
+						className="toLeft"
+						onClick={() => toLeft(findCurrentPicIndex)}
+					>
+							<LeftArrow />
+					</button>
+				}
+			</div>
 			<img
 				className="gallery"
 				alt="postImage"
 				src={currentlyShownPicture}
 			/>
-			{isMultiplePictures && (findCurrentPicIndex+1 < numberOfPictures) &&
-				<button
-					className="toRight"
-					onClick={() => toRight(findCurrentPicIndex)}
-				>
-					<RightArrow />
-				</button>
-			}
+			<div className="buttonSpace">
+				{isMultiplePictures && (findCurrentPicIndex+1 < numberOfPictures) &&
+					<button
+						className="toRight"
+						onClick={() => toRight(findCurrentPicIndex)}
+					>
+						<RightArrow />
+					</button>
+				}
+			</div>
 		</div>
 	)
 }

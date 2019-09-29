@@ -2,7 +2,11 @@ import React from 'react'
 
 const RightArrow = () => {
 	return(
-		<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right" className="svg-inline--fa fa-chevron-right fa-w-10 rightArrow" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width='50' height='50'><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path></svg>
+		<svg width="20" className="rightArrow" version="1.1" xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 64 64"  enable-background="new 0 0 64 64">
+  		<g>
+    		<path fill="#1D1D1B" d="M3.352,48.296l28.56-28.328l28.58,28.347c0.397,0.394,0.917,0.59,1.436,0.59c0.52,0,1.04-0.196,1.436-0.59   c0.793-0.787,0.793-2.062,0-2.849l-29.98-29.735c-0.2-0.2-0.494-0.375-0.757-0.475c-0.75-0.282-1.597-0.107-2.166,0.456   L0.479,45.447c-0.793,0.787-0.793,2.062,0,2.849C1.273,49.082,2.558,49.082,3.352,48.296z"/>
+			</g>
+		</svg>
 	)
 }
 

@@ -1,7 +1,3 @@
-.postGallery{
-	position: relative;
-}
-
 button{
 	border: none;
   margin: 0;
@@ -10,21 +6,32 @@ button{
 	background-color: transparent;
 }
 .toLeft, .toRight{
-	position: absolute;
-	opacity: 0.5;
 	outline: none;
+}
+
+.buttonSpace{
+	width: 10%;
+}
+
+.gallery{
+	width: 80%;
 }
 
 .toLeft {
 	left: 0;
+	transform: rotate(-90deg);
 }
 
 .toRight{
 	right: 0;
+	transform: rotate(90deg);
 }
 
 @media(max-width: 736px) {
 	.toLeft, .toRight{
 		position: fixed;
+	}
+	.gallery{
+		object-fit: contain;
 	}
 }
