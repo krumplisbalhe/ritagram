@@ -9,7 +9,7 @@ function App() {
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
-    fetch("https://firestore.googleapis.com/v1/projects/ritagram-ef29e/databases/(default)/documents/posts?orderBy=date%20desc&pageSize=1000")
+    fetch("")
       .then(response => response.json())
 			.then(data => setPosts(data.documents))
   }, [])
